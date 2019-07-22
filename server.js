@@ -3,11 +3,13 @@ const http = require('http')
 const debug = require('util').debuglog('server')
 const cote = require('cote')
 
-const PORT = 2018
+const PORT = process.env.WEBHOOK_SERVER_PORT
 const EVENT_NAME = 'POST hook received'
 
 const publisher = new cote.Publisher({ name: 'Web-hook publisher' })
 const server = http.createServer(requestHandler)
+
+console.log(`Redis: ${process.env.COTE_DISCOVERY_REDIS_HOST}`)
 
 server.listen(PORT, err => {
   if (err) {

@@ -3,5 +3,7 @@
   "eslint.autoFixOnSave": true,
   "cSpell.words": [
     "readonly"
-  ]
+  ],
+  "prettier.eslintIntegration": true,
+  "files.autoSave": "onFocusChange"
 }
