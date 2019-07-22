@@ -1,0 +1,14 @@
+[Unit]
+Description=A webhook service
+Wants=redis-server.service
+After=redis-server.service
+
+[Service]
+ExecStart=/home/ubuntu/www/cote/server
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/www/cote/
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

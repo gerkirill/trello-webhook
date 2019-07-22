@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "cSpell.words": [
+    "readonly"
+  ]
+}
